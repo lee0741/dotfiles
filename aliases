@@ -1,0 +1,22 @@
+# Programming
+alias pi='pip install'
+alias ven='source bin/activate'
+alias bi='brew install'
+alias bs='brew search'
+alias gi='gem install'
+
+# Utilities
+alias cs='chsh -s /bin/bash'
+alias todo="vim ~/todo.taskpaper"
+alias ipy='ipython --pylab'
+alias fa='less ~/code/zsh/cli-editing'
+alias pv='vim -u ~/code/vim/essential.vim'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Xunlei
+alias lxd='lx download'
+alias lxdd='lx delete'
+
