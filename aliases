@@ -3,7 +3,11 @@ alias pi='pip install'
 alias ven='source bin/activate'
 alias bi='brew install'
 alias bs='brew search'
+alias bl='brew list'
+alias bu='brew uninstall'
 alias gi='gem install'
+alias ss='python -m SimpleHTTPServer'
+alias ps='ps ax | ag -i'
 
 # Utilities
 alias cs='chsh -s /bin/bash'
