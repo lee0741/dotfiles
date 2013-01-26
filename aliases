@@ -15,6 +15,7 @@ alias todo="vim ~/todo.taskpaper"
 alias ipy='ipython --pylab'
 alias fa='less ~/code/zsh/cli-editing'
 alias pv='vim -u ~/code/vim/essential.vim'
+alias top='htop'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
