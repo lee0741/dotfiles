@@ -26,7 +26,7 @@ filetype plugin indent on
 " Supertab
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" Strip all trailing whitespace in the current filE
+" Strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Fold tag
@@ -39,8 +39,8 @@ nnoremap <leader>v V`]
 set smartindent
 
 " Tabs should be converted to a group of 2 spaces.
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set smarttab
 

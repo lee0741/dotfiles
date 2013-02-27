@@ -11,7 +11,7 @@ alias ps='ps ax | ag -i'
 
 # Utilities
 alias cs='chsh -s /bin/bash'
-alias todo="vim ~/todo.taskpaper"
+alias todo="vim ~/Library/Mobile\ Documents/74ZAFF46HB~jp~informationarchitects~Writer/Documents/Todo.taskpaper"
 alias ipy='ipython --pylab'
 alias fa='less ~/code/zsh/cli-editing'
 alias pv='vim -u ~/code/vim/essential.vim'

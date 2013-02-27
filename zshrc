@@ -34,5 +34,5 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # Customize to your needs...
-export PATH=/Library/Frameworks/Python.framework/Versions/Current/bin:/usr/local/share/python:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/lee0741/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/Users/lee0741/code/js/phantomjs/bin:/usr/local/sbin:~/projects/dotfiles/bin
+export PATH=/Library/Frameworks/Python.framework/Versions/Current/bin:/usr/local/share/python:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/lee0741/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/Users/lee0741/code/js/phantomjs/bin:/usr/local/sbin:~/projects/dotfiles/bin:/opt/local/bin:/opt/local/sbin:/usr/texbin
 
