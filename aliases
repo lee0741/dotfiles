@@ -16,6 +16,7 @@ alias ipy='ipython --pylab'
 alias fa='less ~/code/zsh/cli-editing'
 alias pv='vim -u ~/code/vim/essential.vim'
 alias top='htop'
+alias cc='pygmentize -g'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"

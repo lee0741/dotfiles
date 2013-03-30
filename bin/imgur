@@ -20,4 +20,4 @@ payload = dict(key=api_key, image=b64image, title=image_title)
 r = requests.post(url, data=payload)
 j = json.loads(r.text)
 
-ic.launchurl(j['upload']['links']['imgur_page'])
+ic.launchurl(j['upload']['links']['original'])

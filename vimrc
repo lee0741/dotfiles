@@ -39,8 +39,8 @@ nnoremap <leader>v V`]
 set smartindent
 
 " Tabs should be converted to a group of 2 spaces.
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set smarttab
 
@@ -118,3 +118,24 @@ set nofoldenable "dont fold by default
 let g:Powerline_theme="skwp"
 let g:Powerline_colorstheme="skwp"
 let g:Powerline_symbols="fancy"
+
+" Pretty JSON
+map <leader>j :%!python -m json.tool<CR>
+
+" Formd
+function! Formd(option)
+  :let save_view = winsaveview()
+  :let flag = a:option
+  :if flag == "-r"
+    :%! formd -r
+  :elseif flag == "-i"
+    :%! formd -i
+  :else
+    :%! formd -f
+  :endif
+  :call winrestview(save_view)
+endfunction
+
+nmap <leader>fr :call Formd("-r")<CR>
+nmap <leader>fi :call Formd("-i")<CR>
+nmap <leader>f :call Formd("-f")<CR>
