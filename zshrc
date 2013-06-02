@@ -16,18 +16,10 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-function mkcd() {
-  mkdir $1;
-  cd $1;
-}
-
-function cl() {
-  cc $1 | less -R
-}
-
-function jp () {
-  cat $1 | python -m json.tool
-}
+# Functions
+if [ -e "$HOME/.functions" ]; then
+  source "$HOME/.functions"
+fi
 
 # z
 . ~/code/z/z.sh
@@ -65,3 +57,5 @@ if brew list | grep coreutils > /dev/null ; then
   alias ls='ls -F --show-control-chars --color=auto'
   eval `gdircolors -b $HOME/.dir_colors`
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

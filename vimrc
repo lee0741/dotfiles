@@ -11,9 +11,14 @@ set cursorline
 set autochdir
 set hidden
 set laststatus=2
+set nrformats=
 
 " Leader
 let mapleader=","
+
+" Vimrc
+nnoremap <leader>ev :vsplit ~/projects/dotfiles/vimrc<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enable syntax highlighting.
 syntax on
@@ -24,10 +29,10 @@ filetype on
 filetype plugin indent on
 
 " Supertab
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " Fold tag
 nnoremap <leader>ft Vatzf
@@ -50,10 +55,6 @@ set scrolloff=3
 " Use UTF-8
 set encoding=utf-8
 
-" To save, press ctrl-s.
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
-
 " Search as you type.
 set incsearch
 set showmatch
@@ -61,6 +62,9 @@ set hlsearch
 
 " Ignore case when searching.
 set ignorecase
+
+" Wrap a word in double quotes.
+nnoremap <leader>' viw<esc>a"<esc>hbi"<esc>lel
 
 " Remove highlightning after search
 nnoremap <leader><space> :noh<cr>
@@ -75,10 +79,10 @@ set guioptions-=T
 set guifont=Monaco:h16
 
 " NERDTree
-map <left> <Esc>:NERDTreeToggle<RETURN>
+nnoremap <left> <Esc>:NERDTreeToggle<RETURN>
 
 " Tagbar
-nmap <right> <Esc>:TagbarToggle<RETURN>
+nnoremap <right> <Esc>:TagbarToggle<RETURN>
 
 " Solarized
 syntax enable
@@ -91,22 +95,19 @@ colorscheme solarized
 "endif    
 
 " Turn line numbers.
-set number
+set number numberwidth=1
 
 " Zen Coding
-let g:user_zen_expandabbr_key='<D-e>'
+let g:user_zen_expandabbr_key='<c-k>'
 let g:user_zen_complete_tag=1
 
 set linebreak
 
 " Show Invisibles
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<cr>
 set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-
-" Ack
-nnoremap <leader>a :Ack
 
 " Fold
 set fdm=indent
@@ -120,7 +121,7 @@ let g:Powerline_colorstheme="skwp"
 let g:Powerline_symbols="fancy"
 
 " Pretty JSON
-map <leader>j :%!python -m json.tool<CR>
+nnoremap <leader>j :%!python -m json.tool<cr>
 
 " Formd
 function! Formd(option)
@@ -135,7 +136,13 @@ function! Formd(option)
   :endif
   :call winrestview(save_view)
 endfunction
+nnoremap <leader>fr :call Formd("-r")<cr>
+nnoremap <leader>fi :call Formd("-i")<cr>
+nnoremap <leader>f :call Formd("-f")<cr>
 
-nmap <leader>fr :call Formd("-r")<CR>
-nmap <leader>fi :call Formd("-i")<CR>
-nmap <leader>f :call Formd("-f")<CR>
+" Abbreviations
+iabbrev @@ lee0741@gmail.com
+iabbrev ccopy © 2011-2013 Steven Lee.
+iabbrev nname Steven Lee
+iabbrev wweb http://lee0741.github.com/
+

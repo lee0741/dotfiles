@@ -8,6 +8,8 @@ alias bu='brew uninstall'
 alias gi='gem install'
 alias ss='python -m SimpleHTTPServer'
 alias ps='ps ax | ag -i'
+alias ax='chmod +x'
+alias css='sass --watch --debug-info --scss --sourcemap style.scss:style.css'
 
 # Utilities
 alias cs='chsh -s /bin/bash'
