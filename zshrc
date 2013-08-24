@@ -10,6 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="doubleend"
 
 export EDITOR=vim
+export CHEATCOLORS=true
 
 # Aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -49,7 +50,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # Customize to your needs...
-export PATH=/Library/Frameworks/Python.framework/Versions/Current/bin:/usr/local/share/python:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/lee0741/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/Users/lee0741/code/js/phantomjs/bin:/usr/local/sbin:~/projects/dotfiles/bin:/opt/local/bin:/opt/local/sbin:/usr/texbin:/usr/bin/psql
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/usr/local/share/python:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/lee0741/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/lee0741/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/Users/lee0741/code/js/phantomjs/bin:/usr/local/sbin:~/projects/dotfiles/bin:/opt/local/bin:/opt/local/sbin:/usr/texbin
 
 # Solarized ls
 if brew list | grep coreutils > /dev/null ; then
@@ -59,3 +60,6 @@ if brew list | grep coreutils > /dev/null ; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

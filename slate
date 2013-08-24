@@ -18,26 +18,8 @@ alias topright    corner  top-right     resize:screenSizeX/2;screenSizeY/2
 alias bottomleft  corner  bottom-left   resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner  bottom-right  resize:screenSizeX/2;screenSizeY/2 
 
-# Misc Alias
+# Hyper
 alias hyper ctrl;alt;cmd
-
-# Reading Layout
-layout read '预览':REPEAT           ${leftmore}
-layout read 'iTerm':REPEAT          ${topright}
-layout read '有道词典':REPEAT       ${bottomright}
-layout read 'Google Chrome':REPEAT  ${full}
-layout read 'iTunes':REPEAT         ${full}
-
-# Coding Layout
-layout code 'MacVim':REPEAT         ${leftmore}
-layout code 'iTerm':REPEAT          ${topright}
-layout code 'Google Chrome':REPEAT  ${full}
-layout code '有道词典':REPEAT       ${bottomright}
-layout code 'iTunes':REPEAT         ${full}
-
-#Layout Bindings
-bind r:${hyper} layout read
-bind c:${hyper} layout code
 
 # Resize Bindings
 bind right:alt       resize +10% +0
@@ -67,5 +49,6 @@ bind down:cmd     focus down
 bind up:cmd;alt   focus above
 bind down:cmd;alt focus behind
 
-# Window Hints
-bind esc:cmd hint ASDFGHJKLQWERTYUIOPCVBNM
+# Misc Bindings
+bind esc:cmd hint sadfjklewcmpgh
+bind r:${hyper} relaunch

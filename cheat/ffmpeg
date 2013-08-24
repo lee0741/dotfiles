@@ -1,0 +1,2 @@
+# To extract images from the video file:
+ffmpeg -ss XX:XX:XX -i X.mkv -t X(s) -r Framerate -qscale 1 img-%5d.jpg

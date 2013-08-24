@@ -1,0 +1,4 @@
+#! /bin/zsh
+
+python -c "from math import *; print $1" | pbcopy
+pbpaste

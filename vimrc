@@ -12,6 +12,7 @@ set autochdir
 set hidden
 set laststatus=2
 set nrformats=
+set linebreak
 
 " Leader
 let mapleader=","
@@ -101,8 +102,6 @@ set number numberwidth=1
 let g:user_zen_expandabbr_key='<c-k>'
 let g:user_zen_complete_tag=1
 
-set linebreak
-
 " Show Invisibles
 nnoremap <leader>l :set list!<cr>
 set listchars=tab:▸\ ,eol:¬
@@ -146,3 +145,21 @@ iabbrev ccopy © 2011-2013 Steven Lee.
 iabbrev nname Steven Lee
 iabbrev wweb http://lee0741.github.com/
 
+" Markdown
+let g:vim_markdown_folding_disabled=1
+au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} call DistractionFreeWriting()
+function! DistractionFreeWriting()
+  colorscheme iawriter
+  set background=light
+  set lines=40 columns=100
+  set linespace=6
+  set guifontwide=Hiragino\ Sans\ GB\ W3:h18
+  set fuoptions=background:#00f5f6f6
+  set guioptions-=r
+  set laststatus=0
+  set noruler
+  set fullscreen
+endfunction
+
+" Move
+let g:move_key_modifier='C'

@@ -13,12 +13,12 @@ alias css='sass --watch --debug-info --scss --sourcemap style.scss:style.css'
 
 # Utilities
 alias cs='chsh -s /bin/bash'
-alias todo="vim ~/Library/Mobile\ Documents/74ZAFF46HB~jp~informationarchitects~Writer/Documents/Todo.taskpaper"
 alias ipy='ipython --pylab'
 alias fa='less ~/code/zsh/cli-editing'
-alias pv='vim -u ~/code/vim/essential.vim'
 alias top='htop'
 alias cc='pygmentize -g'
+alias r3='mplayer -cache 8192 -cache-min 50 -playlist ~/Music/Playlist/bbc_r3.pls'
+alias proxy='export http_proxy=http://127.0.0.1:8087'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
