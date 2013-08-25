@@ -1,3 +1,0 @@
-#! /bin/zsh
-
-lx list | ag -i --nocolor $1 | head -n 5

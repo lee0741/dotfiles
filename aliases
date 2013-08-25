@@ -27,4 +27,4 @@ alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && kil
 # Xunlei
 alias lxd='lx download'
 alias lxdd='lx delete'
-
+alias lxl='lx list'
