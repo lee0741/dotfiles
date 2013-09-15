@@ -1,5 +1,4 @@
 # Programming
-alias pi='pip install'
 alias ven='source bin/activate'
 alias bi='brew install'
 alias bs='brew search'
@@ -12,6 +11,8 @@ alias ax='chmod +x'
 alias css='sass --watch --debug-info --scss --sourcemap style.scss:style.css'
 
 # Utilities
+alias pi='ssh pi@192.168.0.103'
+alias re='source ~/.zshrc'
 alias cs='chsh -s /bin/bash'
 alias ipy='ipython --pylab'
 alias fa='less ~/code/zsh/cli-editing'
