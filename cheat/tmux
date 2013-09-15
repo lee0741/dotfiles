@@ -1,0 +1,21 @@
+# Init and name the first window:
+tmux new -s windows -n shell
+
+# Detache from a session, and leave it running in the bg:
+prefix d
+
+# Create a new window:
+prefix c
+
+# Rename a window:
+prefix ,
+
+# Next/Previous window:
+prefix n/p
+
+#Display a visual menu for windows:
+prefix w
+
+# Close a window
+exit / prefix &
+
