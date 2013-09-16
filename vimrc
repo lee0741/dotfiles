@@ -17,6 +17,9 @@ set linebreak
 " Leader
 let mapleader=","
 
+" Sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " Vimrc
 nnoremap <leader>ev :vsplit ~/projects/dotfiles/vimrc<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
