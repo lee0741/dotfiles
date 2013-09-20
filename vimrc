@@ -59,6 +59,12 @@ set scrolloff=3
 " Use UTF-8
 set encoding=utf-8
 
+" Perl style regrex
+let g:eregex_default_enable = 1
+let g:eregex_forward_delim = '/'
+let g:eregex_backward_delim = '?'
+nnoremap <leader>/ :call eregex#toggle()<CR>
+
 " Search as you type.
 set incsearch
 set showmatch
