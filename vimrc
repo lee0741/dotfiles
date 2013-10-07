@@ -13,6 +13,8 @@ set hidden
 set laststatus=2
 set nrformats=
 set linebreak
+filetype off
+filetype plugin indent on
 
 " Leader
 let mapleader=","
@@ -20,17 +22,26 @@ let mapleader=","
 " Sudo
 cmap w!! w !sudo tee > /dev/null %
 
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/Command-T'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ervandew/supertab'
+Bundle 'majutsushi/tagbar'
+Bundle 'mattn/emmet-vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'othree/eregex.vim'
+Bundle 'Lokaltog/vim-powerline'
+
 " Vimrc
 nnoremap <leader>ev :vsplit ~/projects/dotfiles/vimrc<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Enable syntax highlighting.
 syntax on
-
-" Pathogen
-call pathogen#infect()
-filetype on
-filetype plugin indent on
 
 " Supertab
 inoremap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -60,7 +71,7 @@ set scrolloff=3
 set encoding=utf-8
 
 " Perl style regrex
-let g:eregex_default_enable = 1
+let g:eregex_default_enable = 0
 let g:eregex_forward_delim = '/'
 let g:eregex_backward_delim = '?'
 nnoremap <leader>/ :call eregex#toggle()<CR>
@@ -88,9 +99,6 @@ set guioptions-=T
 " Fonts.
 set guifont=Monaco:h16
 
-" NERDTree
-nnoremap <left> <Esc>:NERDTreeToggle<RETURN>
-
 " Tagbar
 nnoremap <right> <Esc>:TagbarToggle<RETURN>
 
@@ -107,9 +115,9 @@ colorscheme solarized
 " Turn line numbers.
 set number numberwidth=1
 
-" Zen Coding
-let g:user_zen_expandabbr_key='<c-k>'
-let g:user_zen_complete_tag=1
+" Emmet
+let g:user_emmet_expandabbr_key='<c-k>'
+let g:user_emmet_complete_tag=1
 
 " Show Invisibles
 nnoremap <leader>l :set list!<cr>
@@ -124,35 +132,13 @@ set fdl=1
 set nofoldenable "dont fold by default
 
 " Powerline
-let g:Powerline_theme="skwp"
-let g:Powerline_colorstheme="skwp"
 let g:Powerline_symbols="fancy"
 
 " Pretty JSON
 nnoremap <leader>j :%!python -m json.tool<cr>
-
-" Formd
-function! Formd(option)
-  :let save_view = winsaveview()
-  :let flag = a:option
-  :if flag == "-r"
-    :%! formd -r
-  :elseif flag == "-i"
-    :%! formd -i
-  :else
-    :%! formd -f
-  :endif
-  :call winrestview(save_view)
-endfunction
-nnoremap <leader>fr :call Formd("-r")<cr>
-nnoremap <leader>fi :call Formd("-i")<cr>
-nnoremap <leader>f :call Formd("-f")<cr>
 
 " Abbreviations
 iabbrev @@ lee0741@gmail.com
 iabbrev ccopy © 2011-2013 Steven Lee.
 iabbrev nname Steven Lee
 iabbrev wweb http://lee0741.github.com/
-
-" Move
-let g:move_key_modifier='C'

@@ -20,6 +20,8 @@ alias top='htop'
 alias cc='pygmentize -g'
 alias r3='mplayer -cache 8192 -cache-min 50 -playlist ~/Music/Playlist/bbc_r3.pls'
 alias proxy='export http_proxy=http://127.0.0.1:8087'
+alias coursera='cd ~/mooc && coursera-dl -u lee0741@gmail.com --aria2 -p'
+alias app="find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'"
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"

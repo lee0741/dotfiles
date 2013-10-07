@@ -1,6 +1,6 @@
 function mkcd() {
-  mkdir $1;
-  cd $1;
+  mkdir $1
+  cd $1
 }
 
 function cl() {
@@ -22,4 +22,8 @@ function magnet () {
 
 function mdy () {
   http POST http://fuckyeahmarkdown.com/go/ u==$1 > tmp.md  
+}
+
+function regex () {
+   python -c "import re; re.compile(r'$1',re.DEBUG)"  
 }
