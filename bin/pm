@@ -1,3 +1,0 @@
-#! /bin/zsh
-
-man -t $1 | open -a Preview -f

@@ -1,5 +1,0 @@
-# To extract images from the video file:
-ffmpeg -ss XX:XX:XX -i X.mkv -t X(s) -r Framerate -qscale 1 img-%5d.jpg
-
-# To concatenate two VOB files:
-ffmpeg "concat:1.VOB|2.VOB" -c:v libx264 -c:a aac -strict experimental output.mkv
