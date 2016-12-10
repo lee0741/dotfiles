@@ -12,7 +12,6 @@ alias re='source ~/.zshrc'
 alias cc='pygmentize -g'
 alias coursera='coursera-dl --aria2 -f "mp4 srt" -u lee0741@gmail.com -p'
 alias do='mosh lee0741@162.243.215.56'
-alias ls='ls -F --show-control-chars --color=auto'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"

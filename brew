@@ -6,22 +6,16 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
 # Install everything else
+brew tap homebrew/services
 brew install aria2
 brew install ffmpeg
 brew install git
 brew install hugo
 brew install imagemagick
-brew install macvim
 brew install mecab
 brew install mecab-ipadic
+brew install mitmproxy
 brew install nginx
 brew install nkf
 brew install node
