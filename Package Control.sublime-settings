@@ -5,8 +5,12 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
+		"Emmet",
+		"HTMLBeautify",
 		"Material Theme",
 		"Package Control",
-		"Swift"
+		"Swift",
+		"Vintageous"
 	]
 }
