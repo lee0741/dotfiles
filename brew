@@ -10,6 +10,7 @@ brew upgrade
 brew tap homebrew/services
 brew install aria2
 brew install carthage
+brew install ctags
 brew install ffmpeg
 brew install git
 brew install heroku

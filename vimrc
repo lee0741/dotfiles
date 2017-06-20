@@ -13,6 +13,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'keith/swift.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -99,6 +100,10 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme': "solarized",
     \ }
+" }
+
+" Nerdtree {
+map <c-n> :NERDTreeToggle<cr>
 " }
 
 " vim:foldmarker={,}:foldmethod=marker:foldlevel=0
