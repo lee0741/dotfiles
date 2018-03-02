@@ -5,21 +5,17 @@ set nocompatible
 filetype off
 " }
 
-" Vundle {
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-Plugin 'keith/swift.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'altercation/vim-colors-solarized'
-call vundle#end()
-filetype plugin indent on
+" Plugins {
+call plug#begin('~/.vim/plugged')
+Plug 'kien/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
+Plug 'altercation/vim-colors-solarized'
+call plug#end()
 " }
 
 " Colors {
@@ -35,8 +31,9 @@ set modelines=1
 " }
 
 " Spaces & Tabs {
-set tabstop=4 " number of visual spcaes per TAB
-set softtabstop=4 " number of spaces in tab when editing
+set tabstop=2 " number of visual spcaes per TAB
+set softtabstop=2 " number of spaces in tab when editing
+set sw=2 " shift width
 set expandtab " tabs are spaces
 set autoindent
 " }
