@@ -7,24 +7,25 @@ filetype off
 
 " Plugins {
 call plug#begin('~/.vim/plugged')
+Plug 'dracula/vim',{'as':'dracula'}
 Plug 'kien/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
-Plug 'altercation/vim-colors-solarized'
 call plug#end()
 " }
 
 " Colors {
 syntax enable " enable syntax processing
-colorscheme solarized
 set background=dark
 " }
 
 " Misc {
+set backspace=2
 set encoding=utf-8
 set ttyfast " faster redraw
 set modelines=1
@@ -55,24 +56,32 @@ set hlsearch " highlight matches
 " }
 
 " Folding {
-set foldmethod=indent " fold based on indent level
+set foldmethod=syntax " fold based on indent level
+set foldcolumn=1 " define 1 col at window left
 set foldenable " enable folding
-set foldlevelstart=10 " open most folds by default
-set foldnestmax=10 " 10 nested fold max
-nnoremap <space> za 
+" set foldlevelstart=10 " open most folds by default
+let javaScript_fold=1 " active folding by javascript syntax
+nnoremap <space> za
+hi Folded ctermbg=237 " folding highlight background color
+
+function! CustomFoldText()
+  let foldsize = (v:foldend-v:foldstart)
+  return getline(v:foldstart).' ('.foldsize.' lines)'
+endfunction
+set foldtext=CustomFoldText()
 " }
 
 " Movement {
-nnoremap j <c-d> 
+nnoremap j <c-d>
 nnoremap k <c-u>
 " }
 
 " Leader Shortcuts {
 let mapleader="," " leader is comma
-nnoremap <leader>ev :vsplit ~/Code/dotfiles/vimrc<cr>
-nnoremap <leader>ez :vsplit ~/Code/dotfiles/zshrc<cr>
+nnoremap <leader>ev :vsplit ~/.dotfiles/vimrc<cr>
+nnoremap <leader>ez :vsplit ~/.dotfiles/zshrc<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader><space> :noh<cr> 
+nnoremap <leader><space> :noh<cr>
 nnoremap <leader>a :Ag
 " }
 
